@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+.screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  transition: opacity 1s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show {
+  opacity: 1;
+}
+
+/* INTRO */
+.intro-title {
+  font-size: 4rem;
+}
+
+/* LOCK */
+.lock-title {
+  font-size: 1.5rem;
+}
+
+#nameInput {
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  margin: 15px;
+}
+
+.enter-btn {
+  padding: 12px 30px;
+  border-radius: 25px;
+  background: #ff4b6e;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* STAGE */
+#stage {
+  height: 100vh;
+  overflow-y: auto;
+  padding: 30px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+#stage p {
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  max-width: 90%;
+  text-align: center;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+
+  .intro-title {
+    font-size: 2.2rem;
+    padding: 0 15px;
+  }
+
+  .lock-title {
+    font-size: 1.3rem;
+  }
+
+  #nameInput {
+    width: 75%;
+    max-width: 280px;
+    font-size: 1rem;
+  }
+
+  .enter-btn,
+  button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+
+  img,
+  video {
+    width: 95%;
+    max-width: 95%;
+    max-height: 60vh;
+  }
+
+  #stage {
+    padding: 15px;
+  }
+
+  #stage p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    max-width: 95%;
+  }
+
+  .big-end {
+    font-size: 2.5rem;
+  }
+}
+
+#stage p {
+  font-weight: bold;
+}
+
+/* MEDIA */
+img, video {
+  width: 90%;
+  max-width: 500px;
+  max-height: 70vh;
+  border-radius: 12px;
+  transition: opacity 1s ease;
+}
+
+#nameInput {
+  font-size: 16px;
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+/* END */
+.big-end {
+  font-size: 4rem;
+  animation: fadeOut 3s forwards;
+}
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
+
+
